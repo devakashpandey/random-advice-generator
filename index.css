@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+  background: var(--DarkBlue);
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.advice-generator-wrapper {
+  background: var(--DarkGrayishBlue);
+  width: 35rem;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  box-shadow: rgba(40, 40, 40, 0.2) 0px 7px 29px 0px;
+}
+
+.advice-id {
+  color: var(--NeonGreen);
+  text-align: center;
+  letter-spacing: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.advice {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--LightCyan);
+}
+
+.advice-lower {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 25px 0px;
+}
+
+.btn-container {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background: var(--NeonGreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: -9%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.btn-container:hover {
+  box-shadow: 0px 0px 30px var(--NeonGreen);
+}
+
+.advice-lower > img {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .advice-generator-wrapper {
+    width: 21rem;
+    border-radius: 15px;
+  }
+
+  .advice-id {
+    letter-spacing: 5px;
+    font-size: 0.7rem;
+  }
+
+  .advice {
+    font-size: 1.3rem;
+  }
+
+  .advice-lower {
+    margin: 15px 0px;
+  }
+
+  .btn-container {
+    height: 50px;
+    width: 50px;
+  }
+}
